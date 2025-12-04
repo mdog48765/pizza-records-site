@@ -214,7 +214,7 @@ export default function App() {
         {/* About */}
         <SectionReveal
           id="about"
-          className="border-b border-red-900/60 bg-slate-950/95"
+          className="border-b border-red-900/60 bg-black/98"
         >
           <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
             <div className="grid gap-10 md:grid-cols-[3fr,2fr] md:items-start">
