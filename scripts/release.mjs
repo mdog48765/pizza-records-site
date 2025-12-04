@@ -55,7 +55,7 @@ console.log("\nReading package.json…");
 const pkgRaw = readFileSync("package.json", "utf8");
 const pkg = JSON.parse(pkgRaw);
 
-const oldVersion = pkg.version || "1.0.0";
+const oldVersion = pkg.version || "0.0.0";
 const newVersion = bumpPatchVersion(oldVersion);
 
 pkg.version = newVersion;

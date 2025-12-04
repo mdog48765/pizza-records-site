@@ -63,23 +63,36 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-slate-100">
       {/* Header */}
-      <header className="sticky top-0 z-30 border-b border-red-900/70 bg-black/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
-          {/* Logo / Brand */}
-          <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-black font-black tracking-tight">
-              <img src="./pr-logo.jpeg" alt="Pizza Records Logo" className="h-7 w-7 rounded"/>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-base font-semibold tracking-tight">
-                Pizza Records
-              </span>
-              <span className="text-xs text-slate-400">
-                New &amp; used vinyl · Tapes · CD's · Instruments · Live Music            </span>
-            </div>
-          </div>
-          </div>
-      </header>
+     <header className="sticky top-0 z-30 border-b border-red-900/70 bg-black/90 backdrop-blur">
+  <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+
+    {/* Logo / Brand */}
+    <div className="flex items-center gap-2">
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-black font-black tracking-tight">
+        <img src="./pr-logo.jpeg" alt="Pizza Records Logo" className="h-7 w-7 rounded"/>
+      </div>
+      <div className="flex flex-col leading-tight">
+        <span className="text-base font-semibold tracking-tight">
+          Pizza Records
+        </span>
+        <span className="text-xs text-slate-400">
+          New &amp; used vinyl · Tapes · CD's · Instruments · Live Music
+        </span>
+      </div>
+    </div>
+
+    {/* Navigation */}
+    <nav className="flex items-center gap-6 text-sm">
+      <NavLink target="home">Home</NavLink>
+      <NavLink target="shop">Shop</NavLink>
+      <NavLink target="about">About</NavLink>
+      <NavLink target="shows">Shows</NavLink>
+      <NavLink target="visit">Visit</NavLink>
+    </nav>
+
+  </div>
+</header>
+
 
       {/* Main */}
       <main>
@@ -338,18 +351,21 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="aspect-[2/1] overflow-hidden rounded-2xl border border-red-900 bg-black/80">
- <iframe
-      title="Pizza Records Map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.174716509843!2d-90.23048462402264!3d39.73375807155775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87dfebfe22229f6b%3A0xa24f3eeaa41e6bb6!2s59%20E%20Central%20Pk%20Plz%2C%20Jacksonville%2C%20IL%2062650!5e1!3m2!1sen!2sus!4v1764783008172!5m2!1sen!2sus"
-      className="h-full w-full border-0"
-      loading="lazy"
-      allowFullScreen
-      referrerPolicy="no-referrer-when-downgrade"
-    />         
+            <div className="space-y-3">
+  <div className="mx-auto max-w-xl">
+    <div className="h-64 w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-lg">
+      <iframe
+        title="Pizza Records Map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.174716509843!2d-90.23048462402264!3d39.73375807155775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87dfebfe22229f6b%3A0xa24f3eeaa41e6bb6!2s59%20E%20Central%20Pk%20Plz%2C%20Jacksonville%2C%20IL%2062650!5e1!3m2!1sen!2sus!4v1764783008172!5m2!1sen!2sus"
+        className="h-full w-full border-0"
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+      />
     </div>
-         </div>
+  </div>
+</div>
+
             </div>
           </div>
           </SectionReveal>
