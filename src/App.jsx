@@ -314,15 +314,20 @@ export default function App() {
             </div>
           </div>
 
-          {/* Footer */}
-          <footer className="border-t border-red-900 bg-black py-4">
-            <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-xs text-slate-500 md:flex-row md:px-6">
-              <span>
-                © {new Date().getFullYear()} Pizza Records. All rights
-                reserved.
-              </span>
-            </div>
-          </footer>
+      {/* Footer */}
+<footer className="border-t border-red-900 bg-black py-4">
+  <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-xs text-slate-500 md:flex-row md:px-6">
+    <span>
+      © {new Date().getFullYear()} Pizza Records. All rights reserved.
+    </span>
+
+    <span className="text-slate-600">
+      Site designed & developed by{" "}
+      <span className="text-slate-300">Michael Kyle</span>
+    </span>
+  </div>
+</footer>
+
         </section>
       </main>
     </div>
