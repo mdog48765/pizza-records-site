@@ -315,7 +315,7 @@ export default function App() {
                   <img
                     src="/mkm-logo.png"
                     alt="MKM Entertainment"
-                    className="h-100 w-auto object-contain hover:opacity-80 transition-opacity"                  />
+                    className="h-64 w-auto object-contain hover:opacity-80 transition-opacity"                  />
                 </a>
               </div>
             </div>
