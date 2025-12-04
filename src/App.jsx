@@ -1,6 +1,7 @@
 import React from "react";
+import { useEffect, useRef, useState } from "react";
 
-/* Smooth scroll helper for internal sections */
+
 function scrollToId(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -19,6 +20,44 @@ function NavLink({ target, children }) {
     </button>
   );
 }
+
+function SectionReveal({ id, className = "", children }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el); 
+        }
+      },
+      { threshold: 0.20 } 
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      id={id}
+      ref={ref}
+      className={`
+        ${className}
+        transform transition-all duration-1000 ease-out
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}
+      `}
+    >
+      {children}
+    </section>
+  );
+}
+
 
 export default function App() {
   return (
@@ -60,7 +99,7 @@ export default function App() {
   />
 
   {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
+  <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
 
   {/* Foreground Content */}
   <div className="relative z-10 mx-auto max-w-6xl px-4 py-20 md:px-6">
@@ -92,7 +131,7 @@ export default function App() {
 </section>
 
        {/* Shop */}
-<section id="shop" className="border-b border-red-900/60 bg-black">
+<SectionReveal id="shop" className="border-b border-red-900/60 bg-black">
   <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
     <div className="grid gap-8 md:grid-cols-2 md:items-start">
 
@@ -131,10 +170,10 @@ export default function App() {
       </div>
     </div>
   </div>
-</section>
+</SectionReveal>
 
 {/* About */}
-<section
+<SectionReveal
   id="about"
   className="border-b border-red-900/60 bg-slate-950/95"
 >
@@ -192,10 +231,10 @@ export default function App() {
 
     </div>
   </div>
-</section>
+</SectionReveal>
 
         {/* Shows (light MKM touch) */}
-        <section
+        <SectionReveal
           id="shows"
           className="border-b border-red-900/60 bg-black/98"
         >
@@ -237,10 +276,10 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </SectionReveal>
 
         {/* Visit / Contact */}
-        <section id="visit" className="bg-black">
+        <SectionReveal id="visit" className="bg-black">
           <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
             <div className="grid gap-8 md:grid-cols-[3fr,2fr] md:items-start">
               <div className="space-y-4">
@@ -313,6 +352,7 @@ export default function App() {
          </div>
             </div>
           </div>
+          </SectionReveal>
 
       {/* Footer */}
 <footer className="border-t border-red-900 bg-black py-4">
@@ -327,8 +367,6 @@ export default function App() {
     </span>
   </div>
 </footer>
-
-        </section>
       </main>
     </div>
   );
