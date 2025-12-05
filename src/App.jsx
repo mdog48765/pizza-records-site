@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function scrollToId(id) {
   const el = document.getElementById(id);
@@ -80,8 +79,7 @@ export default function App() {
                   Pizza Records
                 </span>
                 <span className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
-                  New &amp; used vinyl · Tapes · CD&apos;s · Instruments · Live
-                  Music
+                  Vinyl · Tapes · CD&apos;s · Instruments · Live Music
                 </span>
               </div>
             </div>
@@ -99,9 +97,42 @@ export default function App() {
             <button
               type="button"
               onClick={() => setMobileOpen((open) => !open)}
-              className="inline-flex items-center gap-1 rounded-full border border-slate-700 px-3 py-1 text-xs font-medium text-slate-100 hover:border-yellow-300 hover:text-yellow-200 md:hidden"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-100 hover:border-yellow-300 hover:text-yellow-200 transition-colors md:hidden"
+              aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+              aria-expanded={mobileOpen}
             >
-              <span>{mobileOpen ? "Close" : "Menu"}</span>
+              <span className="sr-only">
+                {mobileOpen ? "Close navigation" : "Open navigation"}
+              </span>
+              {mobileOpen ? (
+                // X icon
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 6l12 12M18 6l-12 12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              ) : (
+                // Hamburger icon
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              )}
             </button>
           </div>
 
@@ -123,7 +154,7 @@ export default function App() {
         {/* Hero */}
         <section
           id="home"
-          className="relative h-[500px] w-full overflow-hidden border-b border-red-900/60"
+          className="relative h-[300px] sm:h-[380px] md:h-[520px] w-full overflow-hidden border-b border-red-900/60"
         >
           {/* Background Video */}
           <video
@@ -139,7 +170,7 @@ export default function App() {
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
 
           {/* Foreground Content */}
-          <div className="relative z-10 mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+          <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:py-16 md:px-6 md:py-20">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
                 Pizza Records.
@@ -211,6 +242,70 @@ export default function App() {
           </div>
         </SectionReveal>
 
+        {/* Shows (light MKM touch) */}
+       <SectionReveal
+         id="shows"
+         className="border-b border-red-900/60 bg-black/98"
+       >
+         <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+       
+           {/* TEXT BLOCK — FULL WIDTH */}
+           <div className="space-y-4">
+             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+               Shows &amp; Events
+             </h2>
+       
+             <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+               We love live music as much as we love records. That's why we host shows
+               most weekends, featuring local and touring bands across a variety of
+               genres. From intimate acoustic sets to full band rock shows, there's
+               always something happening at Pizza Records.
+             </p>
+       
+             <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+               Our partnership with MKM Entertainment ensures quality sound and
+               production at every show. Click the logo below to check out the full
+               calendar and learn how to book your own event at Pizza Records.
+             </p>
+           </div>
+       
+           {/* IMAGES ROW — SAME SIZE, SIDE BY SIDE */}
+           <div className="grid grid-cols-2 gap-6 mt-10">
+       
+             {/* MKM Logo in same frame size */}
+             <a
+               href="https://mkmentertainmentllc.com/#shows"
+               target="_blank"
+               rel="noreferrer"
+               className="block w-full"
+             >
+               <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl flex items-center justify-center">
+                 <img
+                   src="/mkm-logo.png"
+                   alt="MKM Entertainment"
+                   className="h-full w-full object-contain"
+                 />
+               </div>
+             </a>
+       
+             {/* Event Photo in same frame size */}
+             <div className="w-full">
+               <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl">
+                 <img
+                   src="/event-photo.jpg"
+                   alt="Live event at Pizza Records"
+                   className="h-full w-full object-cover"
+                 />
+               </div>
+             </div>
+       
+           </div>
+       
+         </div>
+       </SectionReveal>
+
+
+
         {/* About */}
         <SectionReveal
           id="about"
@@ -274,50 +369,6 @@ export default function App() {
 
               {/* RIGHT COLUMN (empty for now) */}
               <div />
-            </div>
-          </div>
-        </SectionReveal>
-
-        {/* Shows (light MKM touch) */}
-        <SectionReveal
-          id="shows"
-          className="border-b border-red-900/60 bg-black/98"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div>
-                <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                  Shows &amp; Events
-                </h2>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                  We love live music as much as we love records. That&apos;s why
-                  we host shows most weekends, featuring local and touring bands
-                  across a variety of genres. From intimate acoustic sets to
-                  full band rock shows, there&apos;s always something happening
-                  at Pizza Records. Our partnership with MKM Entertainment helps
-                  us bring quality sound and production to every event, no
-                  matter the size.
-                </p>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                  To stay updated on upcoming shows, click the logo to visit
-                  their site for the full calendar of upcoming shows and learn
-                  how to book your own event at Pizza Records too!
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://mkmentertainmentllc.com/#shows"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block"
-                >
-                  <img
-                    src="/mkm-logo.png"
-                    alt="MKM Entertainment"
-                    className="h-64 w-auto object-contain hover:opacity-80 transition-opacity"                  />
-                </a>
-              </div>
             </div>
           </div>
         </SectionReveal>
