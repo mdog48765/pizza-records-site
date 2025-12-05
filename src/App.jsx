@@ -170,7 +170,7 @@ export default function App() {
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
 
           {/* Foreground Content */}
-          <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:py-16 md:px-6 md:py-20">
+          <div className="relative z-10 mx-auto max-w-6xl px-4 py-8 sm:py-16 md:px-6 md:py-20">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
                 Pizza Records.
@@ -200,15 +200,15 @@ export default function App() {
 
         {/* Shop */}
         <SectionReveal id="shop" className="border-b border-red-900/60 bg-black">
-          <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+          <div className="mx-auto max-w-6xl px-5 py-10 md:px-6 md:py-16">
             <div className="grid gap-8 md:grid-cols-2 md:items-start">
-              {/* LEFT COLUMN */}
+                      {/* LEFT COLUMN */}
               <div className="space-y-4">
-                <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                <h2 className="text-2xl font-semibold tracking-tight md:text-3xl max-w-md">
                   The Shop
                 </h2>
 
-                <ul className="mt-2 space-y-2 text-sm text-slate-100">
+                <ul className="mt-6 space-y-2 text-sm text-slate-100">
                   <li>• New releases and reissues across multiple genres</li>
                   <li>• LP&apos;s, 45&apos;s, Tapes, CD&apos;s, 8-tracks</li>
                   <li>• Local band sections and small-run releases</li>
