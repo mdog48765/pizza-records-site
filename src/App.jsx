@@ -173,16 +173,18 @@ export default function App() {
           <div className="relative z-10 mx-auto max-w-6xl px-4 py-8 sm:py-16 md:px-6 md:py-20">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-                Pizza Records.
+                Pizza Records – Jacksonville IL
                 <br />
-                <span className="text-red-500">Where the music happens.</span>
+                <span className="text-red-500">
+                  Record Store &amp; Live Music Venue.
+                </span>
               </h1>
 
               <p className="max-w-lg text-sm leading-relaxed text-slate-300 sm:text-base">
                 Pizza Records is a crate-digger&apos;s shop first and foremost:
-                New releases, used gems, band tees; The kind of place where you
+                New releases, used gems, band tees; the kind of place where you
                 lose an afternoon flipping sleeves. We also host a variety of
-                shows most weekends!
+                shows most weekends.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -202,10 +204,10 @@ export default function App() {
         <SectionReveal id="shop" className="border-b border-red-900/60 bg-black">
           <div className="mx-auto max-w-6xl px-5 py-10 md:px-6 md:py-16">
             <div className="grid gap-8 md:grid-cols-2 md:items-start">
-                      {/* LEFT COLUMN */}
+              {/* LEFT COLUMN */}
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold tracking-tight md:text-3xl max-w-md">
-                  The Shop
+                  Vinyl, CDs, Tapes &amp; Music Gear
                 </h2>
 
                 <ul className="mt-6 space-y-2 text-sm text-slate-100">
@@ -243,68 +245,64 @@ export default function App() {
         </SectionReveal>
 
         {/* Shows (light MKM touch) */}
-       <SectionReveal
-         id="shows"
-         className="border-b border-red-900/60 bg-black/98"
-       >
-         <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
-       
-           {/* TEXT BLOCK — FULL WIDTH */}
-           <div className="space-y-4">
-             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-               Shows &amp; Events
-             </h2>
-       
-             <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-               We love live music as much as we love records. That's why we host shows
-               most weekends, featuring local and touring bands across a variety of
-               genres. From intimate acoustic sets to full band rock shows, there's
-               always something happening at Pizza Records.
-             </p>
-       
-             <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-               Our partnership with MKM Entertainment ensures quality sound and
-               production at every show. Click the logo below to check out the full
-               calendar and learn how to book your own event at Pizza Records.
-             </p>
-           </div>
-       
-           {/* IMAGES ROW — SAME SIZE, SIDE BY SIDE */}
-           <div className="grid grid-cols-2 gap-6 mt-10">
-       
-             {/* MKM Logo in same frame size */}
-             <a
-               href="https://mkmentertainmentllc.com/#shows"
-               target="_blank"
-               rel="noreferrer"
-               className="block w-full"
-             >
-               <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl flex items-center justify-center">
-                 <img
-                   src="/mkm-logo.png"
-                   alt="MKM Entertainment"
-                   className="h-full w-full object-contain"
-                 />
-               </div>
-             </a>
-       
-             {/* Event Photo in same frame size */}
-             <div className="w-full">
-               <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl">
-                 <img
-                   src="/event-photo.jpg"
-                   alt="Live event at Pizza Records"
-                   className="h-full w-full object-cover"
-                 />
-               </div>
-             </div>
-       
-           </div>
-       
-         </div>
-       </SectionReveal>
+        <SectionReveal
+          id="shows"
+          className="border-b border-red-900/60 bg-black/98"
+        >
+          <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+            {/* TEXT BLOCK — FULL WIDTH */}
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                Live Music at Pizza Records
+              </h2>
 
+              <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                We love live music as much as we love records. That&apos;s why
+                we host shows most weekends, featuring local and touring bands
+                across a variety of genres. From intimate acoustic sets to full
+                band rock shows, there&apos;s always something happening at
+                Pizza Records.
+              </p>
 
+              <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                Our partnership with MKM Entertainment ensures quality sound and
+                production at every show. Click the logo below to check out the
+                full calendar and learn how to book your own event at Pizza
+                Records.
+              </p>
+            </div>
+
+            {/* IMAGES ROW — SAME SIZE, SIDE BY SIDE */}
+            <div className="grid grid-cols-2 gap-6 mt-10">
+              {/* MKM Logo in same frame size */}
+              <a
+                href="https://mkmentertainmentllc.com/#shows"
+                target="_blank"
+                rel="noreferrer"
+                className="block w-full"
+              >
+                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl flex items-center justify-center">
+                  <img
+                    src="/mkm-logo.png"
+                    alt="MKM Entertainment"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </a>
+
+              {/* Event Photo in same frame size */}
+              <div className="w-full">
+                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl">
+                  <img
+                    src="/event-photo.jpg"
+                    alt="Live event at Pizza Records"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </SectionReveal>
 
         {/* About */}
         <SectionReveal
@@ -316,7 +314,7 @@ export default function App() {
               {/* LEFT COLUMN */}
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                  Meet the owners, Devin &amp; Heather
+                  Meet the Owners, Devin &amp; Heather
                 </h2>
 
                 <div className="w-full max-w-xs overflow-hidden rounded-2xl border border-red-900 shadow-lg">
@@ -356,7 +354,7 @@ export default function App() {
                   effortlessly from jazz to soul to classic rock. You’ll catch
                   them spinning everything from punk and raw rock ’n’ roll to
                   old rebel country, movie soundtracks, and everything in
-                  between!
+                  between.
                 </p>
 
                 <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
@@ -379,7 +377,7 @@ export default function App() {
             <div className="grid gap-8 md:grid-cols-[3fr,2fr] md:items-start">
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                  Visit Pizza Records
+                  Visit Pizza Records in Jacksonville, IL
                 </h2>
                 <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
                   Come flip through the racks, talk shop at the counter, and see
