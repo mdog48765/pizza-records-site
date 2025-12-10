@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { FAQSection } from "./components/FAQSection";
 
 function scrollToId(id) {
   const el = document.getElementById(id);
@@ -90,6 +91,7 @@ export default function App() {
               <NavLink target="shop">Shop</NavLink>
               <NavLink target="about">About</NavLink>
               <NavLink target="shows">Shows</NavLink>
+              <NavLink target="faq">FAQ</NavLink>
               <NavLink target="visit">Visit</NavLink>
             </nav>
 
@@ -143,6 +145,7 @@ export default function App() {
               <NavLink target="shop">Shop</NavLink>
               <NavLink target="about">About</NavLink>
               <NavLink target="shows">Shows</NavLink>
+              <NavLink target="faq">FAQ</NavLink>
               <NavLink target="visit">Visit</NavLink>
             </nav>
           )}
@@ -237,6 +240,7 @@ export default function App() {
                     src="/the-shop.jpg"
                     alt="Inside Pizza Records"
                     className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -286,6 +290,7 @@ export default function App() {
                     src="/mkm-logo.png"
                     alt="MKM Entertainment"
                     className="h-full w-full object-contain"
+                    loading="lazy"
                   />
                 </div>
               </a>
@@ -297,6 +302,7 @@ export default function App() {
                     src="/event-photo.jpg"
                     alt="Live event at Pizza Records"
                     className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -322,6 +328,7 @@ export default function App() {
                     src="/pr-owners.jpg"
                     alt="Owners of Pizza Records"
                     className="w-full h-auto object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -369,6 +376,11 @@ export default function App() {
               <div />
             </div>
           </div>
+        </SectionReveal>
+
+         {/* FAQ Section */}
+        <SectionReveal className="border-t border-red-900/60 bg-black/90">
+          <FAQSection />
         </SectionReveal>
 
         {/* Visit / Contact */}
