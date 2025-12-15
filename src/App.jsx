@@ -70,7 +70,7 @@ export default function App() {
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-black font-black tracking-tight">
                 <img
-                  src="/pr-logo.jpeg"
+                  src="/pr-logo.png"
                   alt="Pizza Records Logo"
                   className="h-7 w-7 rounded"
                 />
