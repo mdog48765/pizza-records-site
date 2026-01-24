@@ -161,7 +161,7 @@ export default function App() {
         >
           {/* Background Video */}
           <video
-            src="/Pr-website-walkthrough.mp4"
+            src="/pr-loop.mp4"
             autoPlay
             muted
             loop
