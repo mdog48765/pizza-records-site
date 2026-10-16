@@ -12,16 +12,6 @@ const faqs = [
       "Yes. We offer trade-ins for records, CDs, and cassettes. Trade value is given as store credit."
   },
   {
-    question: "Are shows all-ages?",
-    answer:
-      "Most Pizza Records shows are all-ages unless otherwise noted. We want the local music scene to be accessible to everyone."
-  },
-  {
-    question: "How do I book a show or host an event at Pizza Records?",
-    answer:
-      "Go to www.mkmentertainmentllc.com to start the booking process."
-  },
-  {
     question: "Do you sell turntables and audio equipment?",
     answer:
       "Yes. We carry select new and used turntables, Walkmans, CD players, speakers, guitar pedals, strings, accessories, slipmats, and more. Inventory changes constantly."

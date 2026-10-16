@@ -80,7 +80,7 @@ export default function App() {
                   Pizza Records
                 </span>
                 <span className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
-                  Vinyl · Tapes · CD&apos;s · Instruments · Live Music
+                  Vinyl · Tapes · CD&apos;s · Instruments
                 </span>
               </div>
             </div>
@@ -90,7 +90,6 @@ export default function App() {
               <NavLink target="home">Home</NavLink>
               <NavLink target="shop">Shop</NavLink>
               <NavLink target="about">About</NavLink>
-              <NavLink target="shows">Shows</NavLink>
               <NavLink target="faq">FAQ</NavLink>
               <NavLink target="visit">Visit</NavLink>
             </nav>
@@ -176,18 +175,17 @@ export default function App() {
           <div className="relative z-10 mx-auto max-w-6xl px-4 py-8 sm:py-16 md:px-6 md:py-20">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-                Pizza Records – Jacksonville IL
+                Pizza Records
                 <br />
                 <span className="text-red-500">
-                  Record Store &amp; Live Music Venue.
+                 Jacksonville, IL's Premiere Record Store
                 </span>
               </h1>
 
               <p className="max-w-lg text-sm leading-relaxed text-slate-300 sm:text-base">
                 Pizza Records is a crate-digger&apos;s shop first and foremost:
                 New releases, used gems, band tees; the kind of place where you
-                lose an afternoon flipping sleeves. We also host a variety of
-                shows most weekends.
+                lose an afternoon flipping sleeves. 
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -248,67 +246,6 @@ export default function App() {
           </div>
         </SectionReveal>
 
-        {/* Shows (light MKM touch) */}
-        <SectionReveal
-          id="shows"
-          className="border-b border-red-900/60 bg-black/98"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
-            {/* TEXT BLOCK — FULL WIDTH */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-                Live Music at Pizza Records
-              </h2>
-
-              <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                We love live music as much as we love records. That&apos;s why
-                we host shows most weekends, featuring local and touring bands
-                across a variety of genres. From intimate acoustic sets to full
-                band rock shows, there&apos;s always something happening at
-                Pizza Records.
-              </p>
-
-              <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                Our partnership with MKM Entertainment ensures quality sound and
-                production at every show. Click the logo below to check out the
-                full calendar and learn how to book your own event at Pizza
-                Records.
-              </p>
-            </div>
-
-            {/* IMAGES ROW — SAME SIZE, SIDE BY SIDE */}
-            <div className="grid grid-cols-2 gap-6 mt-10">
-              {/* MKM Logo in same frame size */}
-              <a
-                href="https://mkmentertainmentllc.com/#shows"
-                target="_blank"
-                rel="noreferrer"
-                className="block w-full"
-              >
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl flex items-center justify-center">
-                  <img
-                    src="/mkm-logo.png"
-                    alt="MKM Entertainment"
-                    className="h-full w-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              </a>
-
-              {/* Event Photo in same frame size */}
-              <div className="w-full">
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-red-900 bg-black/80 shadow-xl">
-                  <img
-                    src="/event-photo.jpg"
-                    alt="Live event at Pizza Records"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </SectionReveal>
 
         {/* About */}
         <SectionReveal
@@ -332,44 +269,43 @@ export default function App() {
                   />
                 </div>
 
-                <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-                  Pizza Records started as a small booth in a local antique
-                  mall, fueled entirely by Devin and Heather’s shared love of
-                  music. After a few months of unexpectedly strong sales, they
-                  took a leap — moving into a tiny room inside a local
-                  multi-business building. That tiny room eventually became a
-                  bigger one, and when the opportunity came to grow again, they
-                  moved into the shop’s current location. What started as a
-                  booth has now become a full community record store, supported
-                  at first by their own massive private collection of over
-                  10,000 records.
-                </p>
+<p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">
+  Pizza Records started with Devin and Heather selling records out of a
+  small booth at a local antique mall. After just a few months, sales
+  were better than they expected, so they decided to give something
+  bigger a shot. They moved into a tiny room in a building shared with
+  other local businesses. Eventually, they outgrew that space, moved
+  into a larger room, and later found the location they're in today.
+  In the beginning, much of the store's inventory came straight from
+  their own personal collection of more than 10,000 records.
+</p>
 
-                <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-                  For Devin and Heather, the heart of Pizza Records has always
-                  been simple: the music. They opened the shop because they
-                  loved records, loved sharing what they loved, and loved the
-                  idea of creating a place where music isn’t just bought — it’s
-                  felt. Hosting in-store musical performances was a natural part
-                  of that dream, and they’ve become passionate supporters of the
-                  local music scene. Seeing young musicians find their voice is
-                  still one of their favorite parts of the job.
-                </p>
+<p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">
+  For Devin and Heather, opening a record store was never just about
+  selling records. They've always loved music and wanted a place
+  where they could share that love with other people. What started
+  as a hobby grew into a business built around discovering music,
+  collecting records, and connecting with people who share that
+  same passion.
+</p>
 
-                <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-                  Their taste is broad — most days you’ll hear the store move
-                  effortlessly from jazz to soul to classic rock. You’ll catch
-                  them spinning everything from punk and raw rock ’n’ roll to
-                  old rebel country, movie soundtracks, and everything in
-                  between.
-                </p>
+<p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">
+  Their taste in music covers just about everything. Walk into Pizza
+  Records on any given day and you might hear jazz, soul, classic
+  rock, punk, old-school rock 'n' roll, outlaw country, or even a
+  movie soundtrack. There's really no telling what they'll have
+  playing next.
+</p>
 
-                <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-                  Above all, Devin and Heather want everyone who walks through
-                  the doors of Pizza Records to feel comfort, excitement,
-                  nostalgia, and love — the same emotions that fueled the shop
-                  from day one.
-                </p>
+<p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+  At the end of the day, Devin and Heather want Pizza Records to be
+  a place people enjoy spending time. Whether you're digging
+  through crates looking for an old favorite, discovering an artist
+  you've never heard before, or just stopping in to see what's new,
+  they want you to feel welcome. It's the same love of music that
+  got them started, and it's what keeps the shop going today.
+</p>
+
               </div>
 
               {/* RIGHT COLUMN (empty for now) */}
